@@ -177,7 +177,7 @@ export default function Home() {
                       className="object-cover w-full h-full transition-transform hover:scale-105 duration-700 ease-in-out"
                       width={500}
                       height={300}
-                      style={{ height: '100%', minHeight: '320px' }}
+                      style={{ height: "100%", minHeight: "320px" }}
                     />
                     <div className="absolute top-4 left-4 z-20">
                       <span className="inline-block px-3 py-1 bg-white/90 dark:bg-gray-900/90 text-sm font-medium rounded-full text-gray-800 dark:text-gray-200 backdrop-blur-sm">
@@ -185,7 +185,7 @@ export default function Home() {
                       </span>
                     </div>
                   </div>
-                  
+
                   {/* Right side - Content */}
                   <div className="p-6 md:p-8 md:w-3/5 flex flex-col justify-between">
                     <div>
@@ -195,40 +195,79 @@ export default function Home() {
                       <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
                         {destination.justification}
                       </p>
-                      
+
                       {/* Additional information */}
                       <div className="mt-6 space-y-3">
                         <div className="flex items-center gap-2">
-                          <svg className="w-5 h-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <svg
+                            className="w-5 h-5 text-blue-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                            />
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
                           </svg>
-                          <span className="text-sm text-gray-600 dark:text-gray-400">Perfect for: {destination.imageSearchTerm || "travelers seeking unique experiences"}</span>
+                          <span className="text-sm text-gray-600 dark:text-gray-400">
+                            Perfect for:{" "}
+                            {destination.imageSearchTerm ||
+                              "travelers seeking unique experiences"}
+                          </span>
                         </div>
-                        
+
                         <div className="flex items-center gap-2">
-                          <svg className="w-5 h-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          <svg
+                            className="w-5 h-5 text-blue-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                            />
                           </svg>
-                          <span className="text-sm text-gray-600 dark:text-gray-400">Best time to visit: Year-round</span>
+                          <span className="text-sm text-gray-600 dark:text-gray-400">
+                            Best time to visit: Year-round
+                          </span>
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Tags and button */}
                     <div className="mt-6">
                       <div className="flex flex-wrap items-center gap-2 mb-4">
                         <span className="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-xs rounded-full text-blue-600 dark:text-blue-400">
-                          #{destination.imageSearchTerm?.split(" ")[0] || "travel"}
+                          #
+                          {destination.imageSearchTerm?.split(" ")[0] ||
+                            "travel"}
                         </span>
                         <span className="px-3 py-1 bg-purple-50 dark:bg-purple-900/20 text-xs rounded-full text-purple-600 dark:text-purple-400">
-                          #{destination.name?.split(",")[0]?.replace(/\s+/g, "").toLowerCase() || "destination"}
+                          #
+                          {destination.name
+                            ?.split(",")[0]
+                            ?.replace(/\s+/g, "")
+                            .toLowerCase() || "destination"}
                         </span>
                         <span className="px-3 py-1 bg-green-50 dark:bg-green-900/20 text-xs rounded-full text-green-600 dark:text-green-400">
                           #vibetravel
                         </span>
                       </div>
-                      
+
                       <button
                         className="mt-2 text-blue-600 dark:text-blue-400 font-medium flex items-center group"
                         onClick={() =>
